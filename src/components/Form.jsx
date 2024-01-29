@@ -35,14 +35,14 @@ const Form = () => {
     return (
         <>
             <div className='main_container' >
-                <form onSubmit={getName} >
+                <form onSubmit={getName} action="https://formspree.io/f/mgegodkb" method="POST">
                     <h1>Forms....{fullName} {getNewPlace} {getNewMail} </h1>
                     <div className='input_container' >
-                        <input type="name" placeholder="enter your name" onChange={inputEvent} value={name} required />
-                        <input type="name" placeholder="enter your place" onChange={getPlace} value={place} required />
-                        <input type="email" placeholder="enter your email" onChange={getEmail} value={Gmail} required />
+                        <input type="name" name='name' placeholder="enter your name" onChange={inputEvent} value={name} required />
+                        <input type="name" name='place' placeholder="enter your place" onChange={getPlace} value={place} required />
+                        <input type="email" name='email' placeholder="enter your email" onChange={getEmail} value={Gmail} required />
+                        <button type='submit'  >Click Me 👆  </button>
                     </div>
-                    <button>Click Me 👆  </button>
                 </form>
             </div>
         </>
